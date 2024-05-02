@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "testingdata.h": "c",
+        "stdio.h": "c",
+        "generictypedefs_1.h": "c",
+        "modbustcp.h": "c"
+    }
+}
