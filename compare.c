@@ -40,7 +40,7 @@ unsigned short int Test_ing(const unsigned char ModbusTcpTxBuf[], const unsigned
             CLR(regis[reg], bit);
         }
        // printf("\n%04x - %04x", COIL[reg],regis[reg]);
-        test_c = (COIL[reg] != regis[reg]) ? 1 : 0;
+        test_c = (Dataregister[reg] != regis[reg]) ? 1 : 0;
     }
 
     if (ModbusTcpRxBuf[7] == 0x0f)
@@ -80,7 +80,7 @@ unsigned short int Test_ing(const unsigned char ModbusTcpTxBuf[], const unsigned
         for (int i = reg; i <= reg +(ModbusTcpRxBuf[12]/2); i++)
         {
             printf("\n%04x--%04x  ", COIL[i], COIL1[i]);
-            if ((COIL[i] != COIL1[i]))
+            if ((Dataregister[i] != COIL1[i]))
             {
                 test_c = 1;
                 break;
